@@ -20,16 +20,16 @@
       // init vConsole
       var vConsole = new VConsole();
       
-      // var hostApi='https://test-api-yixing.tencent.com/yixing/webapi/v1';
-      var hostApi='http://10.98.213.45:18081/yixing/webapi/v1';
+      var hostApi='https://test-api-yixing.tencent.com/yixing/webapi/v1';
+      // var hostApi='http://10.98.213.45:18081/yixing/webapi/v1';
 
       // 获取url中的参数
       function getQueryVariable(variable){
         var query = window.location.search.substring(1);
         var vars = query.split("&");
         for (var i=0;i<vars.length;i++) {
-                var pair = vars[i].split("=");
-                if(pair[0] == variable){return pair[1];}
+          var pair = vars[i].split("=");
+          if(pair[0] == variable){return pair[1];}
         }
         return(false);
       }
@@ -37,9 +37,8 @@
       // 打开微信发票
       function getWechatConfig(accToken) {
         console.log(">>>>>>>>>> getWechatConfig <<<<<<<<<<<")
-        console.log(" getWechatConfig >>>>>>>>>> accToken : ",accToken)
-        accToken="eyJhbGciOiJIUzI1NiJ9.eyJzaWduIjoiTE9DQUxfWWlYaW5nMl9Ub2tlbl9FU01URVNUX3ZfbWxpYW5nc3VuIiwiZXhwIjoxNTk2NTM4NDU3LCJpYXQiOjE1OTY1MzA2OTc2ODR9.XlLXGpU1OvQFbtPK8VYO8PyNuu_TZzE3Lc3g11Ufft0"
-        var url=window.location.origin+"/"
+        console.log("getWechatConfig >>>>>>>>>> accToken : ",accToken)
+        var url=location.href.split('#')[0]
         var params = {'url':url};
         console.log(">>>>>>>>>> params : ",params)
         // 获取微信相关配置
@@ -55,20 +54,18 @@
           async: true,
           success: function (res) {
               console.log("getAuthVerifyConfig >>>>>>>>> res: ",res)
-
+              console.log(">>>>>>>>> window.wx: ",window.wx)
               var wechatConfig={
-                    debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
-                    //appId: res.data.appId, // 必填，公众号的唯一标识
-                    //timestamp: res.data.timeStamp, // 必填，生成签名的时间戳
-                    //nonceStr: res.data.nonceStr, // 必填，生成签名的随机串
-                    //signature: res.data.signature,// 必填，签名，见附录1
-                    appId: "wx539f7f60167e0d0b", // 必填，公众号的唯一标识
-                    timestamp: "1596535459", // 必填，生成签名的时间戳
-                    nonceStr: "123", // 必填，生成签名的随机串
-                    signature: "8de265b2ba5bc8e1c5546fd2f62ad46282c9cc4a",// 必填，签名，见附录1
-                    jsApiList: [
-                      'getLocation'
-                    ] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+                    debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+                    appId: res.data.appId, // 必填，公众号的唯一标识
+                    timestamp: res.data.timeStamp, // 必填，生成签名的时间戳
+                    nonceStr: res.data.nonceStr, // 必填，生成签名的随机串
+                    signature: res.data.signature,// 必填，签名，见附录1
+                    // appId: "wx539f7f60167e0d0b", // 必填，公众号的唯一标识
+                    // timestamp: "1596535459", // 必填，生成签名的时间戳
+                    // nonceStr: "123", // 必填，生成签名的随机串
+                    // signature: "8de265b2ba5bc8e1c5546fd2f62ad46282c9cc4a",// 必填，签名，见附录1
+                    jsApiList: ['getLocation']  // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
                   }
               console.log("getAuthVerifyConfig >>>>>>>>> wechatConfig: ",wechatConfig)
 
@@ -158,8 +155,8 @@
 
       // 页面初始化
       function pageInit(){
-          // getToken();
-          getWechatConfig('--------');
+          getToken();
+          // getWechatConfig('--------');
       }
       pageInit();
 
