@@ -129,7 +129,7 @@
             async: true,
             success: function (res) {
               console.log("getWxToken >>>>>>>>>: ",JSON.stringify(res))
-              if(res.expires_in==0){
+              if(res.access_token){
                 var getTicketUrl= "https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token="+res.access_token+"&type=jsapi"; // 获取 jsapi_ticket
                 $.ajax({
                   contentType: "application/json;charset=UTF-8",
