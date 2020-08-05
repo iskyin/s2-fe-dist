@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta content="width=device-width,initial-scale=1,user-scalable=no" name="viewport" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="format-detection" content="telephone=no,address=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>腾讯驿行</title>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="./static/moment.min.js"></script>
+    <script src="./static/vconsole.min.js"></script>
+  </head>
+  <body>
+
+    <script>
+      // init vConsole
+      var vConsole = new VConsole();
+      // utf8 编码
+      function encodeUTF8(s) {
+          var i, r = [], c, x;
+          for (i = 0; i < s.length; i++)
+            if ((c = s.charCodeAt(i)) < 0x80) r.push(c);
+            else if (c < 0x800) r.push(0xC0 + (c >> 6 & 0x1F), 0x80 + (c & 0x3F));
+            else {
+              if ((x = c ^ 0xD800) >> 10 == 0) //对四字节UTF-16转换为Unicode
+                c = (x << 10) + (s.charCodeAt(++i) ^ 0xDC00) + 0x10000,
+                  r.push(0xF0 + (c >> 18 & 0x7), 0x80 + (c >> 12 & 0x3F));
+              else r.push(0xE0 + (c >> 12 & 0xF));
+              r.push(0x80 + (c >> 6 & 0x3F), 0x80 + (c & 0x3F));
+            };
+          return r;
+      }
+
+      // 字符串加密成 hex 字符串
+      function sha1(s) {
+        var data = new Uint8Array(encodeUTF8(s))
+        var i, j, t;
+        var l = ((data.length + 8) >>> 6 << 4) + 16, s = new Uint8Array(l << 2);
+        s.set(new Uint8Array(data.buffer)), s = new Uint32Array(s.buffer);
+        for (t = new DataView(s.buffer), i = 0; i < l; i++)s[i] = t.getUint32(i << 2);
+        s[data.length >> 2] |= 0x80 << (24 - (data.length & 3) * 8);
+        s[l - 1] = data.length << 3;
+        var w = [], f = [
+          function () { return m[1] & m[2] | ~m[1] & m[3]; },
+          function () { return m[1] ^ m[2] ^ m[3]; },
+          function () { return m[1] & m[2] | m[1] & m[3] | m[2] & m[3]; },
+          function () { return m[1] ^ m[2] ^ m[3]; }
+        ], rol = function (n, c) { return n << c | n >>> (32 - c); },
+          k = [1518500249, 1859775393, -1894007588, -899497514],
+          m = [1732584193, -271733879, null, null, -1009589776];
+        m[2] = ~m[0], m[3] = ~m[1];
+        for (i = 0; i < s.length; i += 16) {
+          var o = m.slice(0);
+          for (j = 0; j < 80; j++)
+            w[j] = j < 16 ? s[i + j] : rol(w[j - 3] ^ w[j - 8] ^ w[j - 14] ^ w[j - 16], 1),
+              t = rol(m[0], 5) + f[j / 20 | 0]() + m[4] + w[j] + k[j / 20 | 0] | 0,
+              m[1] = rol(m[1], 30), m.pop(), m.unshift(t);
+          for (j = 0; j < 5; j++)m[j] = m[j] + o[j] | 0;
+        };
+        t = new DataView(new Uint32Array(m).buffer);
+        for (var i = 0; i < 5; i++)m[i] = t.getUint32(i << 2);
+
+        var hex = Array.prototype.map.call(new Uint8Array(new Uint32Array(m).buffer), function (e) {
+          return (e < 16 ? "0" : "") + e.toString(16);
+        }).join("");
+        return hex;
+      }
+
+      /*
+      ** randomWord 产生任意长度随机字母数字组合
+      ** randomFlag-是否任意长度 min-任意长度最小位[固定位数] max-任意长度最大位
+      */
+      function randomWord(randomFlag, min, max){
+          var str = "",
+              range = min,
+              arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+      
+          // 随机产生
+          if(randomFlag){
+              range = Math.round(Math.random() * (max-min)) + min;
+          }
+          for(var i=0; i<range; i++){
+              pos = Math.round(Math.random() * (arr.length-1));
+              str += arr[pos];
+          }
+          return str;
+      }
+      
+
+      var appId="wxde1775a849247e23";
+      var secret="f7e892f77af1f71e0a7f5c244216f2c6";
+      var hostApi='https://test-api-yixing.tencent.com/yixing/webapi/v1'; // 后端 接口
+      var timeDate=new Date();
+      var noncestr = randomWord(false,16);
+      var timestamp = moment(timeDate).valueOf();
+      var url=window.location.href;
+
+
+      // 获取签名
+      function getSignature(ticket){
+        // 签名字段：
+        // 1、noncestr（随机字符串）, 
+        // 2、有效的 jsapi_ticket, 
+        // 3、timestamp（时间戳）, 
+        // 4、url（当前网页的URL，不包含#及其后面部分）
+        //
+        // 签名规则：
+        // 1、对所有待签名参数按照字段名的ASCII 码从小到大排序（字典序），
+        // 2、使用URL键值对的格式（即key1=value1&key2=value2…）拼接成字符串string1。
+        //   （ * 这里需要注意的是所有参数名均为小写字符。对string1作sha1加密，字段名和字段值都采用原始值，不进行URL 转义。）
+        var jsapi_ticket = ticket; // 生成的 ticket
+        var str1="jsapi_ticket="+jsapi_ticket+"&noncestr="+noncestr+"&timestamp="+timestamp+"&url="+url
+        var strSHA1=sha1(str1);
+        return strSHA1;
+      }
+
+      // 网页授权
+      function getWxToken(){
+          var getTokenUrl= "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid="+appId+"&secret="+secret; // 获取 access_token
+          $.ajax({
+            contentType: "application/json;charset=UTF-8",
+            url: getTokenUrl,
+            type: "GET",
+            async: true,
+            success: function (res) {
+              console.log("getWxToken >>>>>>>>>: ",JSON.stringify(res))
+              if(res.expires_in==0){
+                var getTicketUrl= "https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token="+res.access_token+"&type=jsapi"; // 获取 jsapi_ticket
+                $.ajax({
+                  contentType: "application/json;charset=UTF-8",
+                  url: getTicketUrl,
+                  type: "GET",
+                  async: true,
+                  success: function (res) {
+                    console.log("getTicket >>>>>>>>>: ",JSON.stringify(res));
+                    if(res.errcode){
+                      var signature= getSignature(res.ticket); // 获取签名
+                      var wxConfig={
+                        debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+                        appId: appId, // 必填，公众号的唯一标识
+                        timestamp: timestamp, // 必填，生成签名的时间戳
+                        nonceStr: noncestr, // 必填，生成签名的随机串
+                        signature: signature,// 必填，签名
+                        jsApiList: ["getLocation"] // 必填，需要使用的JS接口列表
+                      };
+
+                      // config接口注入权限验证配置
+                      window.wx.config(wechatConfig);
+                      // 通过ready接口处理成功验证
+                      window.wx.ready(function(){
+                        // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
+                        wx.getLocation({
+                          type: 'wgs84', // 默认为wgs84的gps坐标，如果要返回直接给openLocation用的火星坐标，可传入'gcj02'
+                          success: function (res) {
+                            var latitude = res.latitude; // 纬度，浮点数，范围为90 ~ -90
+                            var longitude = res.longitude; // 经度，浮点数，范围为180 ~ -180。
+                            var speed = res.speed; // 速度，以米/每秒计
+                            var accuracy = res.accuracy; // 位置精度
+                            alert("纬度:"+latitude+",\n   经度:"+longitude+",\n   速度:"+speed+",\n   位置精度:"+accuracy);
+                          }
+                        });
+                      });
+                      // error接口处理失败验证
+                      wx.error(function(res){
+                        // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
+                        console.log("初始化验证失败" + JSON.stringify(err));
+                      });
+
+                    }else{
+                      alert("获取jsapi_ticket异常: " + JSON.stringify(res))
+                    }
+                  },
+                 });
+
+              }else{
+                alert("获取access_token异常: " + JSON.stringify(res))
+              }
+            },
+          });
+      }
+
+      getWxToken();
+
+    </script>
+  </body>
+</html>
