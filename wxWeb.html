@@ -198,7 +198,7 @@
           
           var date2=new Date();
           var timestamp2 = moment(date2).valueOf().toString();
-          timestamp2=timestamp2.subString(0,10);
+          timestamp2=timestamp2.substring(0,10);
           var noncestr2 = randomWord(false,16);
           wx.invoke('chooseInvoice', {
               'timestamp': timestamp2,
