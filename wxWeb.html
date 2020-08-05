@@ -156,10 +156,11 @@
                         wx.invoke('chooseInvoice', {
                             'timestamp': timestamp, 
                             'nonceStr': noncestr, 
-                            }, function(res) {
-                                alert(JSON.stringify(res));
+                            }, 
+                            function(res) {
+                              alert(JSON.stringify(res));
                             }
-                        });
+                        );
                       });
                       // error接口处理失败验证
                       wx.error(function(res){
@@ -201,13 +202,7 @@
               }, function(res) {
                   alert(JSON.stringify(res));
               }
-          })
-
-
-
-
-
-
+          );
       
         });
         // error接口处理失败验证
