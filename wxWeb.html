@@ -91,15 +91,12 @@
           return str;
       }
       
-
       var appId="wxde1775a849247e23";
       var secret="f7e892f77af1f71e0a7f5c244216f2c6";
-      var hostApi='https://test-api-yixing.tencent.com/yixing/webapi/v1'; // 后端 接口
       var timeDate=new Date();
       var noncestr = randomWord(false,16);
       var timestamp = moment(timeDate).valueOf();
       var url=window.location.href;
-
 
       // 获取签名
       function getSignature(ticket){
@@ -122,6 +119,7 @@
       // 网页授权
       function getWxToken(){
           var getTokenUrl= "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid="+appId+"&secret="+secret; // 获取 access_token
+          console.log("getTokenUrl >>>>>>>>>: ",getTokenUrl)
           $.ajax({
             contentType: "application/json;charset=UTF-8",
             url: getTokenUrl,
@@ -184,7 +182,6 @@
             },
           });
       }
-
       getWxToken();
 
     </script>
