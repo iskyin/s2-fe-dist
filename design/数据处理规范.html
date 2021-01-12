@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>··· 数据处理规范 | 架构及规范</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" href="favicon.ico">
+    <meta name="description" content="以前端规范、组件库、技术栈、解决方案等为主的统一文档库。">
+    
+    <link rel="preload" href="/docs/pc/assets/css/0.styles.e2ba7c19.css" as="style"><link rel="preload" href="/docs/pc/assets/js/app.07170346.js" as="script"><link rel="preload" href="/docs/pc/assets/js/2.0b3acc3c.js" as="script"><link rel="preload" href="/docs/pc/assets/js/26.6b89acff.js" as="script"><link rel="prefetch" href="/docs/pc/assets/js/10.ab9c6890.js"><link rel="prefetch" href="/docs/pc/assets/js/11.a058cfc4.js"><link rel="prefetch" href="/docs/pc/assets/js/12.03d1ffb4.js"><link rel="prefetch" href="/docs/pc/assets/js/13.60693cf0.js"><link rel="prefetch" href="/docs/pc/assets/js/14.6da76a75.js"><link rel="prefetch" href="/docs/pc/assets/js/15.137c6a85.js"><link rel="prefetch" href="/docs/pc/assets/js/16.36994ba7.js"><link rel="prefetch" href="/docs/pc/assets/js/17.e4cacc1e.js"><link rel="prefetch" href="/docs/pc/assets/js/18.89d5fbf4.js"><link rel="prefetch" href="/docs/pc/assets/js/19.c16c9e8a.js"><link rel="prefetch" href="/docs/pc/assets/js/20.c2159ce8.js"><link rel="prefetch" href="/docs/pc/assets/js/21.676e7170.js"><link rel="prefetch" href="/docs/pc/assets/js/22.a8fb139d.js"><link rel="prefetch" href="/docs/pc/assets/js/23.c966bbc0.js"><link rel="prefetch" href="/docs/pc/assets/js/24.4c10e500.js"><link rel="prefetch" href="/docs/pc/assets/js/25.5e509177.js"><link rel="prefetch" href="/docs/pc/assets/js/27.18181d33.js"><link rel="prefetch" href="/docs/pc/assets/js/28.9ac83c10.js"><link rel="prefetch" href="/docs/pc/assets/js/29.25ad7055.js"><link rel="prefetch" href="/docs/pc/assets/js/3.653781a0.js"><link rel="prefetch" href="/docs/pc/assets/js/30.7b654270.js"><link rel="prefetch" href="/docs/pc/assets/js/31.4d3895ee.js"><link rel="prefetch" href="/docs/pc/assets/js/32.8d5c1ba2.js"><link rel="prefetch" href="/docs/pc/assets/js/33.07d6b388.js"><link rel="prefetch" href="/docs/pc/assets/js/34.86946f70.js"><link rel="prefetch" href="/docs/pc/assets/js/35.bca32b7c.js"><link rel="prefetch" href="/docs/pc/assets/js/36.792ed7f2.js"><link rel="prefetch" href="/docs/pc/assets/js/37.8280a8d7.js"><link rel="prefetch" href="/docs/pc/assets/js/38.136304c6.js"><link rel="prefetch" href="/docs/pc/assets/js/39.98e01db4.js"><link rel="prefetch" href="/docs/pc/assets/js/4.b6f918ba.js"><link rel="prefetch" href="/docs/pc/assets/js/40.a31dfc19.js"><link rel="prefetch" href="/docs/pc/assets/js/41.9f0f0081.js"><link rel="prefetch" href="/docs/pc/assets/js/42.04811ee9.js"><link rel="prefetch" href="/docs/pc/assets/js/43.3596b5ad.js"><link rel="prefetch" href="/docs/pc/assets/js/44.a678843c.js"><link rel="prefetch" href="/docs/pc/assets/js/45.067c62a5.js"><link rel="prefetch" href="/docs/pc/assets/js/46.85c962fa.js"><link rel="prefetch" href="/docs/pc/assets/js/47.16268acd.js"><link rel="prefetch" href="/docs/pc/assets/js/48.668b1ef1.js"><link rel="prefetch" href="/docs/pc/assets/js/49.bd557723.js"><link rel="prefetch" href="/docs/pc/assets/js/5.0c11f0c7.js"><link rel="prefetch" href="/docs/pc/assets/js/50.064f8920.js"><link rel="prefetch" href="/docs/pc/assets/js/51.12020788.js"><link rel="prefetch" href="/docs/pc/assets/js/52.cd2309df.js"><link rel="prefetch" href="/docs/pc/assets/js/53.f5c8e179.js"><link rel="prefetch" href="/docs/pc/assets/js/54.466632b8.js"><link rel="prefetch" href="/docs/pc/assets/js/55.1292aec3.js"><link rel="prefetch" href="/docs/pc/assets/js/56.97487a42.js"><link rel="prefetch" href="/docs/pc/assets/js/57.99e9a19c.js"><link rel="prefetch" href="/docs/pc/assets/js/58.6ab2159e.js"><link rel="prefetch" href="/docs/pc/assets/js/59.fa31db16.js"><link rel="prefetch" href="/docs/pc/assets/js/6.e517ad41.js"><link rel="prefetch" href="/docs/pc/assets/js/60.102fec85.js"><link rel="prefetch" href="/docs/pc/assets/js/61.c0698b63.js"><link rel="prefetch" href="/docs/pc/assets/js/62.714d77cc.js"><link rel="prefetch" href="/docs/pc/assets/js/63.4480aa62.js"><link rel="prefetch" href="/docs/pc/assets/js/64.7ff04a48.js"><link rel="prefetch" href="/docs/pc/assets/js/7.65cddee5.js"><link rel="prefetch" href="/docs/pc/assets/js/8.2cd1f74e.js"><link rel="prefetch" href="/docs/pc/assets/js/9.d5de387d.js">
+    <link rel="stylesheet" href="/docs/pc/assets/css/0.styles.e2ba7c19.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/docs/pc/" class="home-link router-link-active"><!----> <span class="site-name">架构及规范</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/pc/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/docs/pc/design/" class="nav-link router-link-active">
+  规范文档
+</a></div><div class="nav-item"><a href="/docs/pc/guide/" class="nav-link">
+  组件库
+</a></div><div class="nav-item"><a href="/docs/pc/td/" class="nav-link">
+  技术文档
+</a></div><div class="nav-item"><a href="https://techmap.woa.com/project/21973" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  协同Oteam
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://git.code.oa.com/s2-fe/s2-docs" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Git
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/pc/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/docs/pc/design/" class="nav-link router-link-active">
+  规范文档
+</a></div><div class="nav-item"><a href="/docs/pc/guide/" class="nav-link">
+  组件库
+</a></div><div class="nav-item"><a href="/docs/pc/td/" class="nav-link">
+  技术文档
+</a></div><div class="nav-item"><a href="https://techmap.woa.com/project/21973" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  协同Oteam
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://git.code.oa.com/s2-fe/s2-docs" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Git
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>规范</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/pc/design/" aria-current="page" class="sidebar-link">目录</a></li><li><a href="/docs/pc/design/设计规范.html" class="sidebar-link">设计规范</a></li><li><a href="/docs/pc/design/设计规范-PC端.html" class="sidebar-link">··· PC端规范</a></li><li><a href="/docs/pc/design/设计规范-移动端.html" class="sidebar-link">··· 移动端规范</a></li><li><a href="/docs/pc/design/前端规范.html" class="sidebar-link">前端规范</a></li><li><a href="/docs/pc/design/TS编码规范.html" class="sidebar-link">··· TypeScript 编码规范</a></li><li><a href="/docs/pc/design/Less编码规范.html" class="sidebar-link">··· Less 编码规范</a></li><li><a href="/docs/pc/design/JSX编码规范.html" class="sidebar-link">··· JSX 编码规范</a></li><li><a href="/docs/pc/design/数据传输规范.html" class="sidebar-link">··· 数据传输规范</a></li><li><a href="/docs/pc/design/数据处理规范.html" class="active sidebar-link">··· 数据处理规范</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/pc/design/数据处理规范.html#接口统一存放" class="sidebar-link">接口统一存放</a></li><li class="sidebar-sub-header"><a href="/docs/pc/design/数据处理规范.html#接口数据处理规范" class="sidebar-link">接口数据处理规范</a></li><li class="sidebar-sub-header"><a href="/docs/pc/design/数据处理规范.html#视图层数据处理规范" class="sidebar-link">视图层数据处理规范</a></li></ul></li><li><a href="/docs/pc/design/身份验证规范.html" class="sidebar-link">··· 身份验证规范</a></li><li><a href="/docs/pc/design/项目文档编写规范.html" class="sidebar-link">··· 项目文档编写规范</a></li><li><a href="/docs/pc/design/组件使用规范.html" class="sidebar-link">··· 组件使用规范</a></li><li><a href="/docs/pc/design/组件开发规范.html" class="sidebar-link">··· 组件开发规范</a></li><li><a href="/docs/pc/design/前端国际化规范.html" class="sidebar-link">··· 前端国际化规范</a></li><li><a href="/docs/pc/design/跨平台使用规范.html" class="sidebar-link">··· 跨平台使用规范</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="···-数据处理规范"><a href="#···-数据处理规范" class="header-anchor">#</a> ··· 数据处理规范</h1> <h2 id="接口统一存放"><a href="#接口统一存放" class="header-anchor">#</a> 接口统一存放</h2> <p>规范要求：</p> <ul><li><code>src/api/url.ts</code>文件中统一管理接口地址</li> <li>接口路径前缀可以添加<code>/</code>，因为接口处理时会过滤掉多个<code>/</code>情况</li> <li>接口中<code>必须</code>添加注释说明，方便其他合作人员调用</li></ul> <p>如下：</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token comment">/**
+ * 所有 url 都放在这里统一管理
+ */</span>
+<span class="token keyword">const</span> ApiUrl <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token comment">//  登陆获取Tiket</span>
+  getLoginUrl<span class="token operator">:</span> <span class="token string">'/getLoginUrl'</span><span class="token punctuation">,</span>
+  <span class="token comment">//  获取TOKEN</span>
+  getTokenByTicket<span class="token operator">:</span> <span class="token string">'/getTokenByTicket'</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// ... 其它接口</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> ApiUrl<span class="token punctuation">;</span>
+</code></pre></div><h2 id="接口数据处理规范"><a href="#接口数据处理规范" class="header-anchor">#</a> 接口数据处理规范</h2> <font color="#ff7474"><p>规范要求：</p> <ul><li>接口地址统一调用<code>url.ts</code></li> <li>AJAX 方法统一调用公共方法中封装的<code>request</code></li> <li>接口中<code>必须</code>声明传入参数类型</li> <li>最后返回的数据是页面调用中可以直接使用的数据，在页面调用的地方不用再做任何处理</li> <li>在 api 函数里进行参数前置处理，直接返回接口需要的参数形式</li></ul></font> <p>如下：</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> post <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@/common/request/index'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ApiUrl <span class="token keyword">from</span> <span class="token string">'@/api/url'</span><span class="token punctuation">;</span>
+
+<span class="token comment">/**
+ * 登陆获取Tiket
+ * @param {
+ *  sysId [1：登入，2登出]
+ *  url [跳转的URL]
+ * }
+ * @return data [还有ticket的url]
+ */</span>
+<span class="token keyword">declare</span> <span class="token keyword">interface</span> <span class="token class-name">GetLoginUrlType<span class="token operator">&lt;</span><span class="token constant">T</span> <span class="token operator">=</span> <span class="token builtin">any</span><span class="token operator">&gt;</span></span> <span class="token punctuation">{</span>
+  sysId<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span>
+  url<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">export</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token generic-function"><span class="token function">getLoginUrl</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>params<span class="token operator">:</span> GetLoginUrlType<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token keyword">await</span> <span class="token function">post</span><span class="token punctuation">(</span>ApiUrl<span class="token punctuation">.</span>getLoginUrl<span class="token punctuation">,</span> params<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token builtin">any</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * 获取TOKEN
+ * @param {
+ *  ticket [TICKET]
+ * }
+ * @return data [组装的TOKEN对象]
+ */</span>
+<span class="token keyword">declare</span> <span class="token keyword">interface</span> <span class="token class-name">GetTokenByTicketType<span class="token operator">&lt;</span><span class="token constant">T</span> <span class="token operator">=</span> <span class="token builtin">any</span><span class="token operator">&gt;</span></span> <span class="token punctuation">{</span>
+  ticket<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">export</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">getTokenByTicket</span><span class="token punctuation">(</span>params<span class="token operator">:</span> GetTokenByTicketType<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token keyword">await</span> <span class="token function">post</span><span class="token punctuation">(</span>ApiUrl<span class="token punctuation">.</span>getTokenByTicket<span class="token punctuation">,</span> params<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token builtin">any</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="视图层数据处理规范"><a href="#视图层数据处理规范" class="header-anchor">#</a> 视图层数据处理规范</h2> <font color="#ff7474"><p>规范要求：</p> <ul><li>视图层主要负责交互逻辑实现，不建议对数据进行复杂二次处理</li> <li>视图层<code>支持</code>jsx 语言，但<code>建议</code>使用模板语法</li> <li>创建一个组件时共包含三个文件<code>index.vue</code>、<code>index.less</code>、<code>index.ts</code></li></ul></font> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>body<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>body-box<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      模板语法
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>ts<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue-property-decorator'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Row<span class="token punctuation">,</span> Col <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'element-ui'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> getTodo<span class="token punctuation">,</span> getFirstPageMenu <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@/api/home/home'</span><span class="token punctuation">;</span>
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  components<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">'el-col'</span><span class="token operator">:</span> Col<span class="token punctuation">,</span>
+    <span class="token string">'el-row'</span><span class="token operator">:</span> Row<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">Child</span> <span class="token keyword">extends</span> <span class="token class-name">Vue</span> <span class="token punctuation">{</span>
+  PageMenu <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token keyword">as</span> any<span class="token punctuation">;</span>
+  <span class="token comment">// 业务逻辑</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>less<span class="token punctuation">&quot;</span></span> <span class="token attr-name">scoped</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+<span class="token atrule"><span class="token rule">@import</span> <span class="token string">'./index.less'</span><span class="token punctuation">;</span></span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">1/11/2021, 2:22:36 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/docs/pc/design/数据传输规范.html" class="prev">
+        ··· 数据传输规范
+      </a></span> <span class="next"><a href="/docs/pc/design/身份验证规范.html">
+        ··· 身份验证规范
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/docs/pc/assets/js/app.07170346.js" defer></script><script src="/docs/pc/assets/js/2.0b3acc3c.js" defer></script><script src="/docs/pc/assets/js/26.6b89acff.js" defer></script>
+  </body>
+</html>
