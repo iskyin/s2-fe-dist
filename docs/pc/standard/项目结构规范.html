@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>项目目录结构规范 | 架构及规范</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" href="favicon.ico">
+    <meta name="description" content="以前端规范、组件库、技术栈、解决方案等为主的统一文档库。">
+    
+    <link rel="preload" href="/docs/pc/assets/css/0.styles.e2ba7c19.css" as="style"><link rel="preload" href="/docs/pc/assets/js/app.1ea3705e.js" as="script"><link rel="preload" href="/docs/pc/assets/js/2.0b3acc3c.js" as="script"><link rel="preload" href="/docs/pc/assets/js/44.83953c70.js" as="script"><link rel="prefetch" href="/docs/pc/assets/js/10.ef4b9643.js"><link rel="prefetch" href="/docs/pc/assets/js/11.00268d50.js"><link rel="prefetch" href="/docs/pc/assets/js/12.1eeed0ab.js"><link rel="prefetch" href="/docs/pc/assets/js/13.60693cf0.js"><link rel="prefetch" href="/docs/pc/assets/js/14.7cf6affe.js"><link rel="prefetch" href="/docs/pc/assets/js/15.ba35b1f3.js"><link rel="prefetch" href="/docs/pc/assets/js/16.8e6d5a77.js"><link rel="prefetch" href="/docs/pc/assets/js/17.e4cacc1e.js"><link rel="prefetch" href="/docs/pc/assets/js/18.3ff19ef4.js"><link rel="prefetch" href="/docs/pc/assets/js/19.693464ad.js"><link rel="prefetch" href="/docs/pc/assets/js/20.c15b5424.js"><link rel="prefetch" href="/docs/pc/assets/js/21.0210a265.js"><link rel="prefetch" href="/docs/pc/assets/js/22.bb2912a8.js"><link rel="prefetch" href="/docs/pc/assets/js/23.c37469b8.js"><link rel="prefetch" href="/docs/pc/assets/js/24.303accd1.js"><link rel="prefetch" href="/docs/pc/assets/js/25.801bcf0e.js"><link rel="prefetch" href="/docs/pc/assets/js/26.4736b5d4.js"><link rel="prefetch" href="/docs/pc/assets/js/27.bf8187ba.js"><link rel="prefetch" href="/docs/pc/assets/js/28.6691fbee.js"><link rel="prefetch" href="/docs/pc/assets/js/29.e13bed02.js"><link rel="prefetch" href="/docs/pc/assets/js/3.c8b08528.js"><link rel="prefetch" href="/docs/pc/assets/js/30.5c8a6e71.js"><link rel="prefetch" href="/docs/pc/assets/js/31.1905d43e.js"><link rel="prefetch" href="/docs/pc/assets/js/32.660815e1.js"><link rel="prefetch" href="/docs/pc/assets/js/33.39e8ec28.js"><link rel="prefetch" href="/docs/pc/assets/js/34.98740735.js"><link rel="prefetch" href="/docs/pc/assets/js/35.80ebc0f6.js"><link rel="prefetch" href="/docs/pc/assets/js/36.e6a22100.js"><link rel="prefetch" href="/docs/pc/assets/js/37.93292851.js"><link rel="prefetch" href="/docs/pc/assets/js/38.9f9e3aea.js"><link rel="prefetch" href="/docs/pc/assets/js/39.2a858610.js"><link rel="prefetch" href="/docs/pc/assets/js/4.fd6db830.js"><link rel="prefetch" href="/docs/pc/assets/js/40.20c664c6.js"><link rel="prefetch" href="/docs/pc/assets/js/41.8f061d51.js"><link rel="prefetch" href="/docs/pc/assets/js/42.f61ede7e.js"><link rel="prefetch" href="/docs/pc/assets/js/43.2e22b62c.js"><link rel="prefetch" href="/docs/pc/assets/js/45.067c62a5.js"><link rel="prefetch" href="/docs/pc/assets/js/46.cb68cea3.js"><link rel="prefetch" href="/docs/pc/assets/js/47.0744dea8.js"><link rel="prefetch" href="/docs/pc/assets/js/48.30fe98e5.js"><link rel="prefetch" href="/docs/pc/assets/js/49.f23ce107.js"><link rel="prefetch" href="/docs/pc/assets/js/5.0c11f0c7.js"><link rel="prefetch" href="/docs/pc/assets/js/50.064f8920.js"><link rel="prefetch" href="/docs/pc/assets/js/51.82f06898.js"><link rel="prefetch" href="/docs/pc/assets/js/52.89465b6c.js"><link rel="prefetch" href="/docs/pc/assets/js/53.56eb68b7.js"><link rel="prefetch" href="/docs/pc/assets/js/54.466632b8.js"><link rel="prefetch" href="/docs/pc/assets/js/55.5d1e0606.js"><link rel="prefetch" href="/docs/pc/assets/js/56.41ed43c3.js"><link rel="prefetch" href="/docs/pc/assets/js/57.867a5095.js"><link rel="prefetch" href="/docs/pc/assets/js/58.071050e0.js"><link rel="prefetch" href="/docs/pc/assets/js/59.b239eb7b.js"><link rel="prefetch" href="/docs/pc/assets/js/6.e517ad41.js"><link rel="prefetch" href="/docs/pc/assets/js/60.5b6b6795.js"><link rel="prefetch" href="/docs/pc/assets/js/61.522c6b39.js"><link rel="prefetch" href="/docs/pc/assets/js/62.39dce82f.js"><link rel="prefetch" href="/docs/pc/assets/js/63.f4d9c4cd.js"><link rel="prefetch" href="/docs/pc/assets/js/64.342b13f6.js"><link rel="prefetch" href="/docs/pc/assets/js/7.65cddee5.js"><link rel="prefetch" href="/docs/pc/assets/js/8.675a62bf.js"><link rel="prefetch" href="/docs/pc/assets/js/9.f9c700d1.js">
+    <link rel="stylesheet" href="/docs/pc/assets/css/0.styles.e2ba7c19.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/docs/pc/" class="home-link router-link-active"><!----> <span class="site-name">架构及规范</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/pc/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/docs/pc/standard/" class="nav-link router-link-active">
+  规范文档
+</a></div><div class="nav-item"><a href="/docs/pc/component/" class="nav-link">
+  组件库
+</a></div><div class="nav-item"><a href="/docs/pc/td/" class="nav-link">
+  技术文档
+</a></div><div class="nav-item"><a href="https://techmap.woa.com/project/21973" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  协同Oteam
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://git.code.oa.com/s2-fe/s2-docs" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Git
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/pc/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/docs/pc/standard/" class="nav-link router-link-active">
+  规范文档
+</a></div><div class="nav-item"><a href="/docs/pc/component/" class="nav-link">
+  组件库
+</a></div><div class="nav-item"><a href="/docs/pc/td/" class="nav-link">
+  技术文档
+</a></div><div class="nav-item"><a href="https://techmap.woa.com/project/21973" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  协同Oteam
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://git.code.oa.com/s2-fe/s2-docs" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Git
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>规范</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/pc/standard/" aria-current="page" class="sidebar-link">目录</a></li><li><a href="/docs/pc/standard/设计规范.html" class="sidebar-link">设计规范</a></li><li><a href="/docs/pc/standard/设计规范-PC端.html" class="sidebar-link">··· PC端规范</a></li><li><a href="/docs/pc/standard/设计规范-移动端.html" class="sidebar-link">··· 移动端规范</a></li><li><a href="/docs/pc/standard/前端规范.html" class="sidebar-link">前端规范</a></li><li><a href="/docs/pc/standard/TS编码规范.html" class="sidebar-link">··· TypeScript 编码规范</a></li><li><a href="/docs/pc/standard/Less编码规范.html" class="sidebar-link">··· Less 编码规范</a></li><li><a href="/docs/pc/standard/JSX编码规范.html" class="sidebar-link">··· JSX 编码规范</a></li><li><a href="/docs/pc/standard/数据传输规范.html" class="sidebar-link">··· 数据传输规范</a></li><li><a href="/docs/pc/standard/数据处理规范.html" class="sidebar-link">··· 数据处理规范</a></li><li><a href="/docs/pc/standard/身份验证规范.html" class="sidebar-link">··· 身份验证规范</a></li><li><a href="/docs/pc/standard/项目文档编写规范.html" class="sidebar-link">··· 项目文档编写规范</a></li><li><a href="/docs/pc/standard/组件使用规范.html" class="sidebar-link">··· 组件使用规范</a></li><li><a href="/docs/pc/standard/组件开发规范.html" class="sidebar-link">··· 组件开发规范</a></li><li><a href="/docs/pc/standard/前端国际化规范.html" class="sidebar-link">··· 前端国际化规范</a></li><li><a href="/docs/pc/standard/跨平台使用规范.html" class="sidebar-link">··· 跨平台使用规范</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="项目目录结构规范"><a href="#项目目录结构规范" class="header-anchor">#</a> 项目目录结构规范</h1> <h2 id="简介"><a href="#简介" class="header-anchor">#</a> 简介</h2> <div class="language-ts extra-class"><pre class="language-ts"><code>── project<span class="token operator">-</span>name
+   ├── <span class="token keyword">public</span>                    项目公共目录
+   │   ├── favicon<span class="token punctuation">.</span>ico               Favourite 图标
+   │   └── index<span class="token punctuation">.</span>html                页面入口 <span class="token constant">HTML</span> 模板
+   ├── src                       项目源码目录
+   │   ├── main<span class="token punctuation">.</span>js                   入口js文件
+   │   ├── App<span class="token punctuation">.</span>vue                   根组件
+   │   ├── api                       把所有请求数据的接口，按照模块在单独的<span class="token constant">JS</span>文件中
+   │   │   ├── home<span class="token punctuation">.</span>js                   首页接口
+   │   │   ├── detail<span class="token punctuation">.</span>js                 详情页接口，等等
+   │   │   ···
+   │   ├── assets                    静态资源目录，公共的静态资源，图片，字体等
+   │   │   ├── fonts                     字体资源
+   │   │   ├── images                    图片资源
+   │   │   ···
+   │   ├── common                    公共脚本，样式，配置，等动态信息
+   │   │   ├── js                        公共脚本
+   │   │   │   │── utlis<span class="token punctuation">.</span>js                  公共 <span class="token constant">JS</span> 工具函数
+   │   │   │   │── config<span class="token punctuation">.</span>js                 公共配置
+   │   │   │   ···
+   │   │   ├── style                 公共样式，可以是各种预处理语言
+   │   │   │   │── index<span class="token punctuation">.</span>css                样式主文件
+   │   │   │   │── reset<span class="token punctuation">.</span>css                重置样式
+   │   │   │   ···
+   │   │   ···
+   │   ├── components                公共组件目录
+   │   │   ├── confirm                   弹框组件
+   │   │   │   └── index<span class="token punctuation">.</span>vue
+   │   │   ├── scroll                    局部内容滚动组件
+   │   │   │   └── index<span class="token punctuation">.</span>vue
+   │   │   ···
+   │   ├── http                      封装的 <span class="token constant">HTTP</span> 请求方法
+   │   │   ├── axios<span class="token punctuation">.</span>js                  Axios 的封装
+   │   │   ├── jsonp<span class="token punctuation">.</span>js                  <span class="token constant">JSONP</span> 的封装
+   │   │   ···
+   │   ├── store                     数据中心
+   │   │   ├── state<span class="token punctuation">.</span>js                  state 数据源，数据定义
+   │   │   ├── mutations<span class="token punctuation">.</span>js              同步修改 state 数据的方法定义
+   │   │   ├── mutation<span class="token operator">-</span>types<span class="token punctuation">.</span>js         定义 Mutations 的类型
+   │   │   ├── actions<span class="token punctuation">.</span>js                异步修改 state 数据的方法定义
+   │   │   ├── getters<span class="token punctuation">.</span>js                获取数据的方法定义
+   │   │   └── index<span class="token punctuation">.</span>js                  数据中心入口文件
+   │   ├── routes                    前端路由
+   │   │   └── index<span class="token punctuation">.</span>js
+   │   └── views                     页面目录，所有业务逻辑的页面都应该放这里
+   │       ├── home                      应用首页
+   │       │   └── index<span class="token punctuation">.</span>vue
+   │       ···
+   ├── <span class="token punctuation">.</span>env<span class="token punctuation">.</span>development              Vue 开发环境的配置
+   ├── <span class="token punctuation">.</span>env<span class="token punctuation">.</span>production               Vue 生成环境的配置
+   ├── <span class="token punctuation">.</span>eslintrc<span class="token punctuation">.</span>js                  Eslint 配置文件
+   ├── <span class="token punctuation">.</span>gitignore                    Git 忽略文件
+   ├── <span class="token keyword">package</span><span class="token punctuation">.</span>json                  包依赖文件
+   ├── <span class="token keyword">package</span><span class="token operator">-</span>lock<span class="token punctuation">.</span>json             依赖包版本管理文件
+   ├── <span class="token constant">README</span><span class="token punctuation">.</span>md                     项目介绍
+   ├── vue<span class="token punctuation">.</span>config<span class="token punctuation">.</span>js                 vue<span class="token operator">/</span>cli 项目脚手架配置
+   ···
+
+
+src<span class="token operator">/</span>api 模块的请求方法。应该参考 src<span class="token operator">/</span>views 中的直接子文件夹的结构，做映射。
+src<span class="token operator">/</span>assets <span class="token function">项目的静态资源文件。虽然是静态文件</span><span class="token punctuation">(</span>图片，字体，等<span class="token punctuation">)</span>，但是还是经过 webpack 处理会好一些，因为有些比较小的文件会被打包到文件，减少请求和压缩第三方包。这个模块的文件，如果还需要扩展，一个单词作为文件夹名字！保持简洁性。
+src<span class="token operator">/</span>common 公共的动态的脚本、样式。在实际中，样式可能是各种预处理语言写的，请自行组织目录结构。
+src<span class="token operator">/</span>components 公共组件。放置项目中抽象的基础和业务组件。你应该为每个组件都单独建一个文件夹，以做好组件之间的隔离，并且有一个默认的文件：index<span class="token punctuation">.</span>vue 文件，以便引入组件时少写几个字母。默认组件中的文件是一个最小的单位，不应该有依赖其他组件，或操作 state 状态等行为。
+src<span class="token operator">/</span>http 主要是关于请求方法的封装。建议开发过程中不要修改，因为会影响到全局。
+src<span class="token operator">/</span>store 数据中心。这部分内容比较多，独立出来，详情参考：数据中心
+src<span class="token operator">/</span>router 页面路由。默认所有路由映射写在一个文件，如果需要路由模块化，请自行组织。
+src<span class="token operator">/</span>views 所有业务逻辑的页面。
+
+
+
+</code></pre></div><p>该文档主要的设计目标是项目开发的目录结构保持一致，使容易理解并方便构建与管理。</p> <h3 id="要求"><a href="#要求" class="header-anchor">#</a> 要求</h3> <p>在本文档中，使用的关键字会以中文+括号包含的关键字英文表示：必须(MUST)。关键字&quot;MUST&quot;, &quot;MUST NOT&quot;, &quot;REQUIRED&quot;, &quot;SHALL&quot;, &quot;SHALL NOT&quot;, &quot;SHOULD&quot;, &quot;SHOULD NOT&quot;, &quot;RECOMMENDED&quot;, &quot;MAY&quot;, and &quot;OPTIONAL&quot;被定义在 rfc2119 中。</p> <h3 id="规范说明约定"><a href="#规范说明约定" class="header-anchor">#</a> 规范说明约定</h3> <p>以下规范文档中：</p> <ol><li><code>项目</code>包含但不限于<code>业务项目</code>和<code>包项目</code>。</li> <li><code>${root}</code>表示<code>项目</code>的根目录。</li></ol> <p><a name="restype"></a></p> <h2 id="资源分类"><a href="#资源分类" class="header-anchor">#</a> 资源分类</h2> <p><code>资源</code>分成两大类：</p> <ol><li><code>源代码资源</code>：指开发者编写的源代码，包括<code>js</code>、<code>html</code>、<code>css</code>、<code>template</code>等。</li> <li><code>内容资源</code>：指希望做为内容提供给访问者的资源，包括<code>图片</code>、<code>字体</code>、<code>flash</code>、<code>pdf</code>等。</li></ol> <h2 id="目录命名原则"><a href="#目录命名原则" class="header-anchor">#</a> 目录命名原则</h2> <ol><li>简洁。有习惯性缩写的单词 <em>必须(MUST)</em> 采用容易理解的缩写。如：源代码目录使用<code>src</code>，不使用<code>source</code>。下面是更多例子：
+<ol><li><code>img</code>: 图片。 <em>不允许(MUST NOT)</em> 使用<code>image</code>、<code>images</code>、<code>imgs</code>等。</li> <li><code>js</code>: javascript 脚本。 <em>不允许(MUST NOT)</em> 使用<code>script</code>、<code>scripts</code>等。</li> <li><code>css</code>: 样式表。 <em>不允许(MUST NOT)</em> 使用<code>style</code>、<code>styles</code>等。</li> <li><code>swf</code>: flash。 <em>不允许(MUST NOT)</em> 使用<code>flash</code>等。</li> <li><code>src</code>: 源文件目录。 <em>不允许(MUST NOT)</em> 使用<code>source</code>等。</li> <li><code>dep</code>: 引入的第三方依赖包目录。 <em>不允许(MUST NOT)</em> 使用<code>lib</code>、<code>library</code>、<code>dependency</code>等。</li></ol></li> <li><em>不允许(MUST NOT)</em> 使用复数形式。如：<code>imgs</code>、<code>docs</code>是不被允许的。</li></ol> <h2 id="目录划分"><a href="#目录划分" class="header-anchor">#</a> 目录划分</h2> <p><a name="root"></a></p> <h3 id="root-目录结构划分"><a href="#root-目录结构划分" class="header-anchor">#</a> ${root}目录结构划分</h3> <p>在${root}下，目录结构 <em>必须(MUST)</em> 按照<code>职能</code>进行划分， <em>不允许(MUST NOT)</em> 将<code>资源类型</code>或<code>业务逻辑</code>划分的目录直接置于${root}下。</p> <p>常用的目录有<code>src</code>、<code>doc</code>、<code>dep</code>、<code>test</code>等。详细请参考<a href="#level1">一级目录详细说明</a></p> <div class="language- extra-class"><pre><code>${root}/
+    src/
+    test/
+    doc/
+    dep/
+    ...
+</code></pre></div><h3 id="业务项目目录结构划分"><a href="#业务项目目录结构划分" class="header-anchor">#</a> 业务项目目录结构划分</h3> <p><code>业务项目</code>的${root}目录结构划分遵循<a href="#root">${root}目录结构划分</a>。</p> <h4 id="项目代号"><a href="#项目代号" class="header-anchor">#</a> 项目代号</h4> <p>业务项目 <em>可以(SHOULD)</em> 为项目起一个代号名称。代号名称 <em>必须(MUST)</em> 为一个单词，不宜过长。例：北斗的项目代号为<code>triones</code>，哥伦布的项目代号为<code>clb</code>，百度锦囊的项目代号为<code>jn</code>。项目代号有利于区分不同项目，为未来项目之间的重用留下扩展的后路。</p> <p>在项目开发时，通常会使用如下<a href="/docs/pc/standard/module.html#config">加载器配置</a>，将项目代号指向<code>src</code>。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token punctuation">{</span>
+    baseUrl<span class="token operator">:</span> <span class="token string">'${docroot}'</span><span class="token punctuation">,</span>
+    paths<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string">'triones'</span><span class="token operator">:</span> <span class="token string">'src'</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="根据业务逻辑划分-src-目录结构"><a href="#根据业务逻辑划分-src-目录结构" class="header-anchor">#</a> 根据业务逻辑划分 src 目录结构</h4> <p><code>业务项目</code>的<code>src</code>目录内，绝大多数情况 <em>应当(SHOULD)</em> 根据<code>业务逻辑</code>划分目录结构。划分出的子目录（比如<a href="#bizdirexample">例子</a>中的<code>biz1</code>）我们称为<code>业务目录</code>。</p> <p><code>src</code>下 <em>必须(MUST)</em> 只包含<code>业务目录</code>与<code>common</code>目录。<code>业务公共资源</code> <em>必须(MUST)</em> 命名为<code>common</code>。<code>common</code>目录做为<code>业务公共资源</code>的目录，也视如<code>业务目录</code>。</p> <div class="language- extra-class"><pre><code>${root}/
+    src/
+        common/
+        biz1/
+            subbiz1/
+            subbiz2/
+        biz2/
+</code></pre></div><p>较小规模的<code>业务项目</code>（如投放端），<code>src</code>目录允许视如<code>业务目录</code>，直接按照<a href="#bizdirprinciple">业务目录划分原则</a>划分目录结构。</p> <div class="language- extra-class"><pre><code>${root}/
+    src/
+        foo.js
+</code></pre></div><p><a name="bizdirprinciple"></a></p> <h4 id="业务目录划分原则"><a href="#业务目录划分原则" class="header-anchor">#</a> 业务目录划分原则</h4> <ol><li><code>JS资源</code> <em>不允许(MUST NOT)</em> 按<code>资源类型</code>划分目录， <em>必须(MUST)</em> 按<code>业务逻辑</code>划分目录。<code>JS资源</code>应直接置于<code>业务目录</code>下。即：<code>业务目录</code>下不允许出现<code>js</code>目录。</li> <li>除<code>JS资源</code>外的<code>源文件资源</code>，当资源数量较多时，为方便管理， <em>允许(SHOULD)</em> 按<code>资源类型</code>划分目录。即：<code>业务目录</code>下允许出现<code>css</code>、<code>tpl</code>目录。</li> <li><code>内容资源</code> <em>允许(SHOULD)</em> 按<code>资源类型</code>划分目录。即：<code>业务目录</code>下允许出现<code>img</code>、<code>swf</code>、<code>font</code>目录。</li> <li><code>业务目录</code>中，如果文件太多不好管理，需要划分子目录时，也 <em>必须(MUST)</em> 继续遵守根据<code>业务逻辑</code>划分的原则，划分子业务。如：下面例子中的<code>subbiz1</code>。</li></ol> <p>通常，对于一个<code>业务目录</code>， <em>鼓励(SHOULD)</em> 将业务相关的<code>源文件资源</code>都直接置于<code>业务目录</code>下。</p> <div class="language- extra-class"><pre><code>biz1/
+    img/
+        add_button.png
+    add.js
+    add.tpl.html
+    add.css
+</code></pre></div><p><code>业务目录</code>下<code>源文件资源</code>数量较多时，我们第一直觉应该是：是否业务划分不够细？是否应该划分子业务，建立子业务目录？</p> <div class="language- extra-class"><pre><code>biz2/
+    subbiz1/
+        list.js
+        list.tpl.html
+        list.css
+    subbiz2/
+</code></pre></div><p>遇到确实是一个业务整体，无法划分子业务时， <em>允许(MAY)</em> 将非<code>JS资源</code>按<code>资源类型</code>划分目录进行管理。</p> <div class="language- extra-class"><pre><code>biz1/
+    css/
+        add.css
+        edit.css
+        remove.css
+        img/
+            add_button.png
+    tpl/
+        add.html
+        edit.html
+        remove.html
+    add.js
+    edit.js
+    remove.js
+</code></pre></div><p><code>源文件资源</code>和<code>内容资源</code>请参考<a href="#restype">资源分类</a>章节，常用<code>资源目录</code>请参考<a href="#resdir">资源目录</a>章节，常用<code>业务目录</code>请参考<a href="#bizdir">业务目录</a>章节。</p> <p><a name="bizdirexample"></a></p> <h4 id="业务项目目录划分示例"><a href="#业务项目目录划分示例" class="header-anchor">#</a> 业务项目目录划分示例</h4> <div class="language- extra-class"><pre><code>${root}/
+    src/
+        common/
+            img/
+                sprites.png
+                logo.png
+            conf.js
+            layout.css
+        biz1/
+            img/
+                add_button.png
+            add.js
+            add.tpl.html
+            add.less
+        biz2/
+            subbiz1/
+                list.js
+                list.tpl.html
+                list.css
+            subbiz2/
+    dep/
+        er/
+            src/
+            test/
+        esui/
+            src/
+            test/
+    test/
+    doc/
+    index.html
+    main.html
+    ......
+</code></pre></div><p><a name="packagedir"></a></p> <h3 id="包项目目录结构划分"><a href="#包项目目录结构划分" class="header-anchor">#</a> 包项目目录结构划分</h3> <p><code>包项目</code>的${root}目录结构划分遵循<a href="#root">${root}目录结构划分</a>。</p> <p><a name="packagesrc"></a></p> <h4 id="包项目-src-目录结构划分"><a href="#包项目-src-目录结构划分" class="header-anchor">#</a> 包项目 src 目录结构划分</h4> <p><code>包</code>是实现某个独立功能，有复用价值的代码集。按照通常的理解，一个<code>包项目</code>不应该特别复杂。</p> <p>所以，<code>包</code>可视如一个不太复杂的<code>业务</code>，其<code>src</code>下的划分原则与<code>业务项目</code>的<a href="#bizdirprinciple">业务目录划分原则</a>保持一致。</p> <div class="language- extra-class"><pre><code>${root}/
+    src/
+        css/
+            img/
+                sprites.png
+            table.css
+            button.css
+            select.css
+        main.js
+        Control.js
+        InputControl.js
+        Button.js
+        Table.js
+        Select.js
+    test/
+    doc/
+    package.json
+    ...
+</code></pre></div><h2 id="常用目录"><a href="#常用目录" class="header-anchor">#</a> 常用目录</h2> <p><a name="level1"></a></p> <h3 id="一级目录"><a href="#一级目录" class="header-anchor">#</a> 一级目录</h3> <p>直接置于<code>${root}</code>下的目录称作<code>一级目录</code>。一级目录 <em>必须(MUST)</em> 具有某种<code>职能</code>属性。</p> <p>除了下面列举的一些常见目录之外，<code>${root}</code>下面也可以放置一些跟项目发布相关的文件，例如<code>build.sh</code>，<code>build.xml</code>，<code>Makefile</code>，<code>Gruntfile</code>等等.</p> <h4 id="src"><a href="#src" class="header-anchor">#</a> src</h4> <p><code>src</code>目录用于存放开发时源文件，发布时 <em>必须(MUST)</em> 被删除。</p> <h4 id="dep"><a href="#dep" class="header-anchor">#</a> dep</h4> <p><code>dep</code>目录用于存放<code>项目</code>引入依赖的第三方包。该目录下的内容通过平台工具管理，项目开发人员 <em>不允许(MUST NOT)</em> 更改<code>dep</code>目录下第三方包的任何内容。</p> <p>当项目需要修改引入的第三方代码时，第三方包应将源码直接置于<code>${root}/src</code>目录下，规则见该目录下的规定。</p> <p>更多关于<code>包</code>的内容请参考 <a href="/docs/pc/standard/package.html">包结构规范</a></p> <h4 id="tool"><a href="#tool" class="header-anchor">#</a> tool</h4> <p><code>tool</code>目录用于存放开发时或构建阶段使用的工具。该目录在发布时 <em>必须(MUST)</em> 被删除。</p> <h4 id="test"><a href="#test" class="header-anchor">#</a> test</h4> <p><code>test</code>目录用于存放测试用例以及开发阶段的模拟数据。该目录在发布时 <em>必须(MUST)</em> 被删除。</p> <h4 id="doc"><a href="#doc" class="header-anchor">#</a> doc</h4> <p><code>doc</code>目录用于存放项目文档。项目文档可能是开发者维护的文档，也可能是通过工具生成的文档。</p> <h4 id="entry"><a href="#entry" class="header-anchor">#</a> entry</h4> <p><code>entry</code>目录用于存放项目的<code>页面入口文件</code>，通常是上线后可被直接访问的静态页面。</p> <p><code>RIA项目</code>通常会包含较少的<code>页面入口文件</code>，常见的是<code>main.html</code>，这些文件 <em>可以(SHOULD)</em> 直接放在<code>${root}</code>目录下。</p> <div class="language- extra-class"><pre><code>${root}/
+    src/
+        common/
+            conf.js
+        card/
+        gold/
+        message/
+    index.html
+    main.html
+    ......
+</code></pre></div><p><code>多页面项目</code>通常<code>页面入口文件</code>较多， <em>可以(SHOULD)</em> 统一放在<code>entry</code>目录中，按<code>业务逻辑</code>命名。</p> <div class="language- extra-class"><pre><code>${root}/
+    src/
+        common/
+            conf.js
+        card/
+        gold/
+        message/
+    entry/
+        card.html
+        gold.html
+        message.html
+        ......
+</code></pre></div><p>项目在发布的时候，构建工具可以<code>页面入口文件</code>为入口进行分析和编译。</p> <p><code>RIA项目</code>经过构建工具编译后，目录结构可能如下：</p> <div class="language- extra-class"><pre><code>output/
+    asset/
+        js/
+        css/
+        tpl/
+        img/
+    index.html
+    main.html
+</code></pre></div><p><code>多页面项目</code>经过构建工具编译后，目录结构可能如下：</p> <div class="language- extra-class"><pre><code>output/
+    card/
+        asset/
+            js/
+            css/
+            img/
+        index.html
+    gold/
+        asset/
+            js/
+            css/
+            img/
+        index.html
+</code></pre></div><h4 id="asset"><a href="#asset" class="header-anchor">#</a> asset</h4> <p><code>asset</code>目录用于存放用于<code>线上访问</code>的静态资源。</p> <p>通常构建工具会对<code>src</code>目录和<code>dep</code>目录下的资源进行分析、合并与压缩等，生成到<code>asset</code>目录下。所以该目录尽量避免手工管理。下面是一个构建工具生成后的<code>asset</code>目录示例：</p> <div class="language- extra-class"><pre><code>${root}/
+    asset/
+        js/
+            loader.js
+            build.js
+        css/
+            common.css
+            img/
+        tpl/
+            build.tpl.html
+        img/
+        ...
+</code></pre></div><p><a name="resdir"></a></p> <h3 id="资源目录"><a href="#资源目录" class="header-anchor">#</a> 资源目录</h3> <p>按<code>资源</code>类型命名的目录称作<code>资源目录</code>。<code>资源目录</code> <em>不允许(MUST NOT)</em> 直接置于${root}下。</p> <h4 id="js"><a href="#js" class="header-anchor">#</a> js</h4> <p><code>js</code>目录可用于存放<code>js</code>资源文件（包含可编译成<code>js</code>的<code>coffeescript</code>等语言）。<code>js</code>文件后缀名 <em>必须(MUST)</em> 为.js，<code>coffeescript文件</code>后缀名 <em>必须(MUST)</em> 为.coffee。</p> <p><code>js</code>目录内 <em>必须(MUST)</em> 存放<code>js</code>资源文件，但<code>js</code>资源文件不一定（MAY NOT）存放于<code>js</code>目录下：</p> <ol><li>对于<code>src</code>目录，<code>js</code>资源文件 <em>不允许(MUST NOT)</em> 存放于<code>js</code>目录下。</li> <li>对于<code>asset</code>目录，<code>js</code>资源文件 <em>可以(SHOULD)</em> 存放于<code>js</code>目录下，视构建行为决定。</li> <li>对于其他<code>一级目录</code>内，<code>js</code>资源文件 <em>可以(SHOULD)</em> 不存放于<code>js</code>目录下。</li></ol> <h4 id="css"><a href="#css" class="header-anchor">#</a> css</h4> <p><code>css</code>目录可用于存放<code>css资源文件</code>（包含<code>less</code>，<code>sass</code>等动态样式表语言）。<code>css</code>文件后缀名 <em>必须(MUST)</em> 为.css，<code>less</code>文件后缀名 <em>必须(MUST)</em> 为<code>.less</code>。</p> <p><code>css</code>目录内 <em>必须(MUST)</em> 存放<code>css</code>资源文件，但<code>css</code>资源文件不一定（MAY NOT）存放于<code>css</code>目录下：</p> <ol><li>对于<code>src</code>目录，<code>css</code>资源文件 <em>可以(SHOULD)</em> 存放于<code>业务目录</code>下，也 <em>可以(SHOULD)</em> 存放于<code>css</code>目录下。</li> <li>对于<code>asset</code>目录，<code>css</code>资源文件 <em>可以(SHOULD)</em> 存放于<code>css</code>目录下，视构建行为决定。</li> <li>对于其他<code>一级目录</code>内，<code>css</code>资源文件 <em>可以(SHOULD)</em> 不存放于<code>css</code>目录下。</li></ol> <p>关于 css 引用图片的位置说明，请参考<a href="#imgdir">img</a>章节。</p> <p><a name="imgdir"></a></p> <h4 id="img"><a href="#img" class="header-anchor">#</a> img</h4> <p><code>img</code>目录可用于存放<code>图片资源文件</code>。包括<code>页面直接引用</code>的图片与<code>css引用</code>图片。常见的图片资源有<code>gif/jpg/png/svg/bmp</code>等。</p> <p>对于<code>css</code>引用的图片， <em>必须(MUST)</em> 放在<code>./img</code>目录下，<code>.</code>代表当前<code>css</code>资源所在的目录。</p> <p>对于<code>页面直接引用</code>的图片：</p> <ol><li>被多页面引用的图片 <em>应该(SHOULD)</em> 放在<code>${root}/src/common/img</code>目录下。</li> <li>单一页面引用的图片 <em>应该(SHOULD)</em> 放在<code>./img</code>目录下，<code>.</code>代表当前页面所在的目录。</li></ol> <h4 id="tpl"><a href="#tpl" class="header-anchor">#</a> tpl</h4> <p><code>tpl</code>目录可用于存放<code>template</code>资源文件。<code>template</code>资源文件后缀名 <em>可以(SHOULD)</em> 为<code>.html</code>或<code>.tpl</code>。</p> <p>通常，对于<code>RIA</code>系统，<code>template</code>资源文件采用<code>.html</code>后缀使其能够被<code>xhr</code>加载。</p> <h4 id="font"><a href="#font" class="header-anchor">#</a> font</h4> <p><code>font</code>目录可用于存放字体资源文件。常见的字体资源有<code>tff/woff/svg</code>等。</p> <h4 id="swf"><a href="#swf" class="header-anchor">#</a> swf</h4> <p><code>swf</code>目录可用于存放<code>flash</code>资源文件。<code>flash</code>资源文件 <em>不允许(MUST NOT)</em> 置于<code>img</code>目录中。</p> <p><a name="bizdir"></a></p> <h3 id="业务目录"><a href="#业务目录" class="header-anchor">#</a> 业务目录</h3> <p><a name="commondir"></a></p> <h4 id="common"><a href="#common" class="header-anchor">#</a> common</h4> <p><code>common</code>目录为业务公共目录，用于存放业务项目的业务公共文件。所以，根据<code>业务逻辑</code>划分目录结构时，业务逻辑命名 <em>不允许(MUST NOT)</em> 为<code>common</code>。</p> <h2 id="faq"><a href="#faq" class="header-anchor">#</a> FAQ</h2> <h3 id="为啥-biz-下面没资源类型目录了"><a href="#为啥-biz-下面没资源类型目录了" class="header-anchor">#</a> 为啥 biz 下面没资源类型目录了？</h3> <p>如果在<code>biz</code>下继续划分<code>资源目录</code>，代码的结构可能就是这样子了：</p> <div class="language- extra-class"><pre><code>${root}/
+    src/
+        biz1/
+            js/
+                list.js
+</code></pre></div><p>当我们需要使用<code>list.js</code>的时候，必须写如下的代码：<code>require(&quot;../biz1/js/list&quot;)</code>，但是从逻辑上说，更合理的写法应该是<code>require(&quot;../biz1/list&quot;)</code>。因此我们不推荐在<code>biz</code>下面对源代码资源划分目录。</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">1/12/2021, 5:40:44 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/docs/pc/assets/js/app.1ea3705e.js" defer></script><script src="/docs/pc/assets/js/2.0b3acc3c.js" defer></script><script src="/docs/pc/assets/js/44.83953c70.js" defer></script>
+  </body>
+</html>

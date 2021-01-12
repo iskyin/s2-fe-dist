@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>··· Less 编码规范 | 架构&amp;规范</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="icon" href="favicon.ico">
+    <meta name="description" content="以前端规范、组件库、技术栈、解决方案等为主的统一文档库。">
+    
+    <link rel="preload" href="/docs/pc/assets/css/0.styles.e7dda72d.css" as="style"><link rel="preload" href="/docs/pc/assets/js/app.c821791e.js" as="script"><link rel="preload" href="/docs/pc/assets/js/2.57129fef.js" as="script"><link rel="preload" href="/docs/pc/assets/js/20.a53747b8.js" as="script"><link rel="prefetch" href="/docs/pc/assets/js/10.e4ff4d11.js"><link rel="prefetch" href="/docs/pc/assets/js/11.48f4bf97.js"><link rel="prefetch" href="/docs/pc/assets/js/12.d5f46f74.js"><link rel="prefetch" href="/docs/pc/assets/js/13.aaebe24c.js"><link rel="prefetch" href="/docs/pc/assets/js/14.51a6da24.js"><link rel="prefetch" href="/docs/pc/assets/js/15.6906e5d5.js"><link rel="prefetch" href="/docs/pc/assets/js/16.a5c99b4a.js"><link rel="prefetch" href="/docs/pc/assets/js/17.9a8aeca7.js"><link rel="prefetch" href="/docs/pc/assets/js/18.08f0e388.js"><link rel="prefetch" href="/docs/pc/assets/js/19.2fb45ede.js"><link rel="prefetch" href="/docs/pc/assets/js/21.6fb979aa.js"><link rel="prefetch" href="/docs/pc/assets/js/22.3a06f371.js"><link rel="prefetch" href="/docs/pc/assets/js/23.17a46e27.js"><link rel="prefetch" href="/docs/pc/assets/js/24.05e66530.js"><link rel="prefetch" href="/docs/pc/assets/js/25.5fa815be.js"><link rel="prefetch" href="/docs/pc/assets/js/26.0adacb57.js"><link rel="prefetch" href="/docs/pc/assets/js/27.40ac55b2.js"><link rel="prefetch" href="/docs/pc/assets/js/28.8fa7af31.js"><link rel="prefetch" href="/docs/pc/assets/js/29.8b56be86.js"><link rel="prefetch" href="/docs/pc/assets/js/3.b043bd4d.js"><link rel="prefetch" href="/docs/pc/assets/js/30.f3cae8c0.js"><link rel="prefetch" href="/docs/pc/assets/js/31.cbc8618c.js"><link rel="prefetch" href="/docs/pc/assets/js/32.bcb8ebac.js"><link rel="prefetch" href="/docs/pc/assets/js/33.ad1401aa.js"><link rel="prefetch" href="/docs/pc/assets/js/34.aa94ed39.js"><link rel="prefetch" href="/docs/pc/assets/js/35.21a41554.js"><link rel="prefetch" href="/docs/pc/assets/js/36.7fc274b0.js"><link rel="prefetch" href="/docs/pc/assets/js/37.191f5456.js"><link rel="prefetch" href="/docs/pc/assets/js/38.68055e61.js"><link rel="prefetch" href="/docs/pc/assets/js/39.5409104e.js"><link rel="prefetch" href="/docs/pc/assets/js/4.fbb5b667.js"><link rel="prefetch" href="/docs/pc/assets/js/40.549e208d.js"><link rel="prefetch" href="/docs/pc/assets/js/41.0da1dbfe.js"><link rel="prefetch" href="/docs/pc/assets/js/42.7ce6c244.js"><link rel="prefetch" href="/docs/pc/assets/js/43.b289fcaa.js"><link rel="prefetch" href="/docs/pc/assets/js/44.739807b4.js"><link rel="prefetch" href="/docs/pc/assets/js/45.75b71b53.js"><link rel="prefetch" href="/docs/pc/assets/js/46.412f474e.js"><link rel="prefetch" href="/docs/pc/assets/js/47.c9f56612.js"><link rel="prefetch" href="/docs/pc/assets/js/48.3781d594.js"><link rel="prefetch" href="/docs/pc/assets/js/49.1620f0a1.js"><link rel="prefetch" href="/docs/pc/assets/js/5.e9010a15.js"><link rel="prefetch" href="/docs/pc/assets/js/50.366f4c9a.js"><link rel="prefetch" href="/docs/pc/assets/js/51.98f99439.js"><link rel="prefetch" href="/docs/pc/assets/js/52.15af8077.js"><link rel="prefetch" href="/docs/pc/assets/js/53.cc9eb0cc.js"><link rel="prefetch" href="/docs/pc/assets/js/54.580de4fe.js"><link rel="prefetch" href="/docs/pc/assets/js/55.b55189b4.js"><link rel="prefetch" href="/docs/pc/assets/js/56.dadd658e.js"><link rel="prefetch" href="/docs/pc/assets/js/57.1f61c15b.js"><link rel="prefetch" href="/docs/pc/assets/js/58.ebdcad20.js"><link rel="prefetch" href="/docs/pc/assets/js/59.a5059bde.js"><link rel="prefetch" href="/docs/pc/assets/js/6.cd2a0896.js"><link rel="prefetch" href="/docs/pc/assets/js/60.54a8e907.js"><link rel="prefetch" href="/docs/pc/assets/js/61.afe65a1d.js"><link rel="prefetch" href="/docs/pc/assets/js/62.dc619fc3.js"><link rel="prefetch" href="/docs/pc/assets/js/63.7722c464.js"><link rel="prefetch" href="/docs/pc/assets/js/7.29cd831f.js"><link rel="prefetch" href="/docs/pc/assets/js/8.522b8f18.js"><link rel="prefetch" href="/docs/pc/assets/js/9.83d80752.js">
+    <link rel="stylesheet" href="/docs/pc/assets/css/0.styles.e7dda72d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/docs/pc/" class="home-link router-link-active"><!----> <span class="site-name">架构&amp;规范</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/pc/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/docs/pc/design/" class="nav-link router-link-active">
+  规范文档
+</a></div><div class="nav-item"><a href="/docs/pc/guide/" class="nav-link">
+  组件库
+</a></div><div class="nav-item"><a href="/docs/pc/td/" class="nav-link">
+  技术文档
+</a></div><div class="nav-item"><a href="https://techmap.woa.com/project/11012" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  协同Oteam
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://git.code.oa.com/s2-fe/s2pc-ui" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/pc/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/docs/pc/design/" class="nav-link router-link-active">
+  规范文档
+</a></div><div class="nav-item"><a href="/docs/pc/guide/" class="nav-link">
+  组件库
+</a></div><div class="nav-item"><a href="/docs/pc/td/" class="nav-link">
+  技术文档
+</a></div><div class="nav-item"><a href="https://techmap.woa.com/project/11012" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  协同Oteam
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://git.code.oa.com/s2-fe/s2pc-ui" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>规范</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/pc/design/" aria-current="page" class="sidebar-link">目录</a></li><li><a href="/docs/pc/design/设计规范.html" class="sidebar-link">设计规范</a></li><li><a href="/docs/pc/design/设计规范-PC端.html" class="sidebar-link">··· PC端规范</a></li><li><a href="/docs/pc/design/设计规范-移动端.html" class="sidebar-link">··· 移动端规范</a></li><li><a href="/docs/pc/design/前端规范.html" class="sidebar-link">前端规范</a></li><li><a href="/docs/pc/design/TS编码规范.html" class="sidebar-link">··· TypeScript 编码规范</a></li><li><a href="/docs/pc/design/Less编码规范.html" class="active sidebar-link">··· Less 编码规范</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/pc/design/Less编码规范.html#编码" class="sidebar-link">编码</a></li><li class="sidebar-sub-header"><a href="/docs/pc/design/Less编码规范.html#代码组织" class="sidebar-link">代码组织</a></li><li class="sidebar-sub-header"><a href="/docs/pc/design/Less编码规范.html#import-语句" class="sidebar-link">@import 语句</a></li><li class="sidebar-sub-header"><a href="/docs/pc/design/Less编码规范.html#空格" class="sidebar-link">空格</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/pc/design/Less编码规范.html#属性、变量" class="sidebar-link">属性、变量</a></li><li class="sidebar-sub-header"><a href="/docs/pc/design/Less编码规范.html#运算" class="sidebar-link">运算</a></li><li class="sidebar-sub-header"><a href="/docs/pc/design/Less编码规范.html#混入-mixin" class="sidebar-link">混入（Mixin）</a></li></ul></li><li class="sidebar-sub-header"><a href="/docs/pc/design/Less编码规范.html#选择器" class="sidebar-link">选择器</a></li><li class="sidebar-sub-header"><a href="/docs/pc/design/Less编码规范.html#省略与缩写" class="sidebar-link">省略与缩写</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/pc/design/Less编码规范.html#缩写" class="sidebar-link">缩写</a></li><li class="sidebar-sub-header"><a href="/docs/pc/design/Less编码规范.html#数值" class="sidebar-link">数值</a></li><li class="sidebar-sub-header"><a href="/docs/pc/design/Less编码规范.html#_0-值" class="sidebar-link">0 值</a></li><li class="sidebar-sub-header"><a href="/docs/pc/design/Less编码规范.html#颜色" class="sidebar-link">颜色</a></li><li class="sidebar-sub-header"><a href="/docs/pc/design/Less编码规范.html#私有属性前缀" class="sidebar-link">私有属性前缀</a></li><li class="sidebar-sub-header"><a href="/docs/pc/design/Less编码规范.html#其他" class="sidebar-link">其他</a></li></ul></li><li class="sidebar-sub-header"><a href="/docs/pc/design/Less编码规范.html#嵌套和缩进" class="sidebar-link">嵌套和缩进</a></li><li class="sidebar-sub-header"><a href="/docs/pc/design/Less编码规范.html#变量" class="sidebar-link">变量</a></li><li class="sidebar-sub-header"><a href="/docs/pc/design/Less编码规范.html#继承" class="sidebar-link">继承</a></li><li class="sidebar-sub-header"><a href="/docs/pc/design/Less编码规范.html#混入-mixin-2" class="sidebar-link">混入（Mixin）</a></li><li class="sidebar-sub-header"><a href="/docs/pc/design/Less编码规范.html#命名空间" class="sidebar-link">命名空间</a></li><li class="sidebar-sub-header"><a href="/docs/pc/design/Less编码规范.html#字符串" class="sidebar-link">字符串</a></li><li class="sidebar-sub-header"><a href="/docs/pc/design/Less编码规范.html#js-表达式" class="sidebar-link">JS 表达式</a></li><li class="sidebar-sub-header"><a href="/docs/pc/design/Less编码规范.html#注释" class="sidebar-link">注释</a></li></ul></li><li><a href="/docs/pc/design/JSX编码规范.html" class="sidebar-link">··· JSX编码规范</a></li><li><a href="/docs/pc/design/数据传输规范.html" class="sidebar-link">···  数据传输规范</a></li><li><a href="/docs/pc/design/数据处理规范.html" class="sidebar-link">··· 数据处理规范</a></li><li><a href="/docs/pc/design/身份验证规范.html" class="sidebar-link">··· 身份验证规范</a></li><li><a href="/docs/pc/design/业务文档编写规范.html" class="sidebar-link">··· 业务文档编写规范</a></li><li><a href="/docs/pc/design/组件使用规范.html" class="sidebar-link">··· 组件使用规范</a></li><li><a href="/docs/pc/design/组件开发规范.html" class="sidebar-link">··· 组件开发规范</a></li><li><a href="/docs/pc/design/前端国际化规范.html" class="sidebar-link">··· 前端国际化规范</a></li><li><a href="/docs/pc/design/跨平台使用规范.html" class="sidebar-link">··· 跨平台使用规范</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="···-less-编码规范"><a href="#···-less-编码规范" class="header-anchor">#</a> ··· Less 编码规范</h1> <blockquote><p>Less 代码的基本规范。</p></blockquote> <h2 id="编码"><a href="#编码" class="header-anchor">#</a> 编码</h2> <p>使用UTF-8编码。<em>不得</em>（MUST NOT）包含BOM信息。</p> <h2 id="代码组织"><a href="#代码组织" class="header-anchor">#</a> 代码组织</h2> <p>代码<code>必须</code>（MUST）按如下形式按顺序组织：</p> <ol><li><code>@import</code></li> <li>变量声明</li> <li>样式声明</li></ol> <div class="language-less extra-class"><pre class="language-less"><code><span class="token variable">@import</span> <span class="token string">&quot;~@/styles/base.less&quot;</span><span class="token punctuation">;</span>
+
+<span class="token comment">/* --------- iconfont  --------- */</span>
+<span class="token variable">@iconfont-inlay<span class="token punctuation">:</span></span> <span class="token string">'S2H5-INLAY'</span><span class="token punctuation">;</span>
+<span class="token variable">@iconfont-path<span class="token punctuation">:</span></span> <span class="token string">&quot;./fonts&quot;</span><span class="token punctuation">;</span>
+<span class="token variable">@iconfont-version<span class="token punctuation">:</span></span> <span class="token string">&quot;0.1.1&quot;</span><span class="token punctuation">;</span>
+
+<span class="token selector">.page</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 960px<span class="token punctuation">;</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span> 0 auto<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><hr> <h2 id="import-语句"><a href="#import-语句" class="header-anchor">#</a> <code>@import</code> 语句</h2> <p><code>@import</code> 语句引用的文件<em>必须</em>（MUST）写在一对引号内，<code>.less</code> 后缀<em>不得</em>（MUST NOT）省略（与引入 CSS 文件时的路径格式一致）。引号使用 <code>'</code> 和 <code>&quot;</code> 均可，但在同一项目内<em>必须</em>（MUST）统一。</p> <div class="language-less extra-class"><pre class="language-less"><code><span class="token variable">@import</span> <span class="token string">&quot;~@/styles/base.less&quot;</span><span class="token punctuation">;</span>
+<span class="token comment">// 或</span>
+<span class="token variable">@import</span> <span class="token string">'./common/reset'</span><span class="token punctuation">;</span>
+<span class="token variable">@import</span> <span class="token string">'./common/mixin'</span><span class="token punctuation">;</span>
+<span class="token variable">@import</span> <span class="token string">'./common/variables'</span><span class="token punctuation">;</span>
+<span class="token variable">@import</span> <span class="token string">'./common/iconfont'</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="空格"><a href="#空格" class="header-anchor">#</a> 空格</h2> <h3 id="属性、变量"><a href="#属性、变量" class="header-anchor">#</a> 属性、变量</h3> <ol><li>选择器和 <code>{</code> 之间<em>必须</em>（MUST）保留一个空格。</li> <li>属性名后的冒号（<code>:</code>）与属性值之间<em>必须</em>（MUST）保留一个空格，冒号前<em>不得</em>（MUST NOT）保留空格。</li> <li>定义变量时冒号（<code>:</code>）与变量值之间<em>必须</em>（MUST）保留一个空格，冒号前<em>不得</em>（MUST NOT）保留空格。</li> <li>在用逗号（<code>,</code>）分隔的列表（Less 函数参数列表、以 <code>,</code> 分隔的属性值等）中，逗号后<em>必须</em>（MUST）保留一个空格，逗号前<em>不得</em>（MUST NOT）保留空格。</li></ol> <div class="language-less extra-class"><pre class="language-less"><code><span class="token selector">html,
+body,
+#app</span> <span class="token punctuation">{</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span>100%<span class="token punctuation">;</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token variable">@color-gray</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="运算"><a href="#运算" class="header-anchor">#</a> 运算</h3> <p><code>+</code> / <code>-</code> / <code>*</code> / <code>/</code> 四个运算符两侧<em>必须</em>（MUST）保留一个空格。<code>+</code> / <code>-</code> 两侧的操作数<em>必须</em>（MUST）有相同的单位，如果其中一个是变量，另一个数值<em>必须</em>（MUST）书写单位。</p> <div class="language-less extra-class"><pre class="language-less"><code><span class="token variable">@width<span class="token punctuation">:</span></span> 200px<span class="token punctuation">;</span>
+<span class="token variable">@widthContent<span class="token punctuation">:</span></span> <span class="token punctuation">(</span><span class="token variable">@a</span> <span class="token operator">+</span> 100px<span class="token punctuation">)</span> <span class="token operator">*</span> 2<span class="token punctuation">;</span>
+</code></pre></div><h3 id="混入-mixin"><a href="#混入-mixin" class="header-anchor">#</a> 混入（Mixin）</h3> <p>Mixin 和后面的空格之间<em>不得</em>（MUST NOT）包含空格。在给 mixin 传递参数时，在参数分隔符（<code>,</code> / <code>;</code>）后<em>必须</em>（MUST）保留一个空格：</p> <div class="language-less extra-class"><pre class="language-less"><code><span class="token selector">.box</span> <span class="token punctuation">{</span>
+    <span class="token mixin-usage function">.size</span><span class="token punctuation">(</span>30px<span class="token punctuation">,</span> 20px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token mixin-usage function">.clearfix</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="选择器"><a href="#选择器" class="header-anchor">#</a> 选择器</h2> <p>当多个选择器共享一个声明块时，每个选择器声明<em>必须</em>（MUST）独占一行。</p> <div class="language-less extra-class"><pre class="language-less"><code><span class="token comment">// ✗</span>
+<span class="token selector">h1, h2, h3</span> <span class="token punctuation">{</span>
+    <span class="token property">font-weight</span><span class="token punctuation">:</span> 700<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// ✓</span>
+<span class="token selector">h1,
+h2,
+h3</span> <span class="token punctuation">{</span>
+    <span class="token property">font-weight</span><span class="token punctuation">:</span> 700<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>Class 命名不得以样式信息进行描述，如 <code>.float-right</code>、<code>text-red</code> 等。</p> <h2 id="省略与缩写"><a href="#省略与缩写" class="header-anchor">#</a> 省略与缩写</h2> <h3 id="缩写"><a href="#缩写" class="header-anchor">#</a> 缩写</h3> <p>多个属性定义可以使用缩写时， <em>尽量</em>（SHOULD）使用缩写。缩写更清晰字节数更少。常见缩写有 <code>margin</code>、<code>border</code>、<code>padding</code>、<code>font</code>、<code>list-style</code> 等。在书写时<em>必须</em>（MUST）考量缩写展开后是否有不需要覆盖的属性内容被修改，从而带来副作用。</p> <h3 id="数值"><a href="#数值" class="header-anchor">#</a> 数值</h3> <p>对于处于 <code>(0, 1)</code> 范围内的数值，小数点前的 <code>0</code> <em>可以</em>（MAY）省略，同一项目中<em>必须</em>（MUST）保持一致。</p> <div class="language-less extra-class"><pre class="language-less"><code><span class="token comment">// ✗</span>
+<span class="token property">transition-duration</span><span class="token punctuation">:</span> 0.5s<span class="token punctuation">,</span> .7s<span class="token punctuation">;</span>
+
+<span class="token comment">// ✓</span>
+<span class="token property">transition-duration</span><span class="token punctuation">:</span> .5s<span class="token punctuation">,</span> .7s<span class="token punctuation">;</span>
+</code></pre></div><h3 id="_0-值"><a href="#_0-值" class="header-anchor">#</a> 0 值</h3> <p>当属性值为 0 时，<em>必须</em>（MUST）省略可省的单位（长度单位如 <code>px</code>、<code>em</code>，不包括时间、角度等如 <code>s</code>、<code>deg</code>）。</p> <div class="language-less extra-class"><pre class="language-less"><code><span class="token comment">// ✗</span>
+<span class="token property">margin-top</span><span class="token punctuation">:</span> 0px<span class="token punctuation">;</span>
+
+<span class="token comment">// ✓</span>
+<span class="token property">margin-top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+</code></pre></div><h3 id="颜色"><a href="#颜色" class="header-anchor">#</a> 颜色</h3> <p>颜色定义<em>必须</em>（MUST）使用 <code>#rrggbb</code> 格式定义，并在可能时<em>尽量</em>（SHOULD）缩写为 <code>#rgb</code> 形式，且避免直接使用颜色名称与 <code>rgb()</code> 表达式。</p> <div class="language-less extra-class"><pre class="language-less"><code><span class="token comment">// ✗</span>
+<span class="token property">border-color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span>254<span class="token punctuation">,</span> 254<span class="token punctuation">,</span> 254<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// ✓</span>
+<span class="token property">border-color</span><span class="token punctuation">:</span> #f00<span class="token punctuation">;</span>
+<span class="token property">color</span><span class="token punctuation">:</span> #fefefe<span class="token punctuation">;</span>
+</code></pre></div><h3 id="私有属性前缀"><a href="#私有属性前缀" class="header-anchor">#</a> 私有属性前缀</h3> <p>同一属性有不同私有前缀的，<em>尽量</em>（SHOULD）按前缀长度降序书写，标准形式<em>必须</em>（MUST）写在最后。且这一组属性以第一条的位置为准，<em>尽量</em>（SHOULD）按冒号的位置对齐。</p> <div class="language-less extra-class"><pre class="language-less"><code><span class="token comment">// ✓</span>
+<span class="token selector">.box</span> <span class="token punctuation">{</span>
+    <span class="token property">-webkit-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>30deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+       <span class="token property">-moz-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>30deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token property">-ms-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>30deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+         <span class="token property">-o-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>30deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>30deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="其他"><a href="#其他" class="header-anchor">#</a> 其他</h3> <p><em>可以</em>（MAY）在无其他更好解决办法时使用 CSS hack，并且<em>尽量</em>（SHOULD）使用简单的属性名 hack 如 <code>_zoom</code>、<code>*margin</code>。</p> <p><em>可以</em>（MAY）但谨慎使用 IE 滤镜。需要注意的是，IE 滤镜中图片的 URL 是以页面路径作为相对目录，而不是 CSS 文件路径。</p> <hr> <h2 id="嵌套和缩进"><a href="#嵌套和缩进" class="header-anchor">#</a> 嵌套和缩进</h2> <p><em>必须</em>（MUST）采用 4 个空格为一次缩进， <em>不得</em>（MUST NOT）采用 TAB 作为缩进。</p> <p>嵌套的声明块前<em>必须</em>（MUST）增加一次缩进，有多个声明块共享命名空间时<em>尽量</em>（SHOULD）嵌套书写，避免选择器的重复。</p> <p>但是需注意的是，<em>尽量</em>（SHOULD）仅在必须区分上下文时才引入嵌套关系（在嵌套书写前先考虑如果不能嵌套，会如何书写选择器）。</p> <div class="language-less extra-class"><pre class="language-less"><code><span class="token comment">// ✗</span>
+<span class="token selector">.main .title</span> <span class="token punctuation">{</span>
+  <span class="token property">font-weight</span><span class="token punctuation">:</span> 700<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.main .content</span> <span class="token punctuation">{</span>
+  <span class="token property">line-height</span><span class="token punctuation">:</span> 1.5<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.main</span> <span class="token punctuation">{</span>
+<span class="token selector">.warning</span> <span class="token punctuation">{</span>
+  <span class="token property">font-weight</span><span class="token punctuation">:</span> 700<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+  <span class="token selector">.comment-form</span> <span class="token punctuation">{</span>
+    <span class="token selector">#comment:invalid</span> <span class="token punctuation">{</span>
+      <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// ✓</span>
+<span class="token selector">.main</span> <span class="token punctuation">{</span>
+    <span class="token selector">.title</span> <span class="token punctuation">{</span>
+        <span class="token property">font-weight</span><span class="token punctuation">:</span> 700<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.content</span> <span class="token punctuation">{</span>
+        <span class="token property">line-height</span><span class="token punctuation">:</span> 1.5<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.warning</span> <span class="token punctuation">{</span>
+        <span class="token property">font-weight</span><span class="token punctuation">:</span> 700<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">#comment:invalid</span> <span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><hr> <h2 id="变量"><a href="#变量" class="header-anchor">#</a> 变量</h2> <p>Less 的变量值总是以同一作用域下最后一个同名变量为准，务必注意后面的设定会覆盖所有之前的设定。</p> <p>变量命名<em>必须</em>（MUST）采用 <code>@foo-bar</code> 形式，<em>不得</em>（MUST NOT）使用 <code>@fooBar</code> 形式。</p> <div class="language-less extra-class"><pre class="language-less"><code><span class="token comment">// ✗</span>
+<span class="token variable">@sidebarWidth<span class="token punctuation">:</span></span> 200px<span class="token punctuation">;</span>
+<span class="token variable">@width<span class="token punctuation">:</span></span>800px<span class="token punctuation">;</span>
+
+<span class="token comment">// ✓</span>
+<span class="token variable">@sidebar-width<span class="token punctuation">:</span></span> 200px<span class="token punctuation">;</span>
+<span class="token variable">@width<span class="token punctuation">:</span></span> 800px<span class="token punctuation">;</span>
+</code></pre></div><hr> <h2 id="继承"><a href="#继承" class="header-anchor">#</a> 继承</h2> <p>使用继承时，如果在声明块内书写 <code>:extend</code> 语句，<em>必须</em>（MUST）写在开头：</p> <div class="language-less extra-class"><pre class="language-less"><code><span class="token comment">// ✗</span>
+<span class="token selector">.sub</span> <span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+    &amp;<span class="token punctuation">:</span><span class="token function">extend</span><span class="token punctuation">(</span>.mod all<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// ✓</span>
+<span class="token selector">.sub</span> <span class="token punctuation">{</span>
+    &amp;<span class="token punctuation">:</span><span class="token function">extend</span><span class="token punctuation">(</span>.mod all<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><hr> <h2 id="混入-mixin-2"><a href="#混入-mixin-2" class="header-anchor">#</a> 混入（Mixin）</h2> <p>在定义 mixin 时，如果 mixin 名称不是一个需要使用的 className，<em>必须</em>（MUST）加上括号，否则即使不被调用也会输出到 CSS 中。</p> <div class="language-less extra-class"><pre class="language-less"><code><span class="token comment">// ✗</span>
+<span class="token selector">.big-text</span> <span class="token punctuation">{</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> 2em<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">h3</span> <span class="token punctuation">{</span>
+    <span class="token mixin-usage function">.big-text</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// ✓</span>
+<span class="token selector">.big-text()</span> <span class="token punctuation">{</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> 2em<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">h3</span> <span class="token punctuation">{</span>
+    <span class="token mixin-usage function">.big-text</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>如果混入的是本身不输出内容的 mixin，<em>必须</em>（MUST）在 mixin 后添加括号（即使不传参数），以区分这是否是一个 className（修改以后是否会影响 HTML）。</p> <div class="language-less extra-class"><pre class="language-less"><code><span class="token comment">// ✗</span>
+<span class="token selector">.box</span> <span class="token punctuation">{</span>
+    <span class="token mixin-usage function">.clearfix</span><span class="token punctuation">;</span>
+    <span class="token mixin-usage function">.size </span><span class="token punctuation">(</span>20px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// ✓</span>
+<span class="token selector">.box</span> <span class="token punctuation">{</span>
+    <span class="token mixin-usage function">.clearfix</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token mixin-usage function">.size</span><span class="token punctuation">(</span>20px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>Mixin 的参数分隔符使用 <code>,</code> 和 <code>;</code> 均可，但在同一项目中<em>必须</em>（MUST）保持统一。</p> <hr> <h2 id="命名空间"><a href="#命名空间" class="header-anchor">#</a> 命名空间</h2> <p>变量和 mixin 在命名时<em>必须</em>（MUST）遵循如下原则：</p> <ul><li>一个项目只能引入一个无命名前缀的基础样式库（如 est）</li> <li>业务代码和其他被引入的样式代码中，变量和 mixin 必须有项目或库的前缀</li></ul> <hr> <h2 id="字符串"><a href="#字符串" class="header-anchor">#</a> 字符串</h2> <p>在进行字符串转义时，使用 <code>~&quot;&quot;</code> 表达式与 <code>e()</code> 函数均可，但在同一项目中<em>必须</em>（MUST）保持一致。</p> <p>字符串两侧的引号<em>必须</em>（MUST）使用 <code>&quot;</code>。</p> <h2 id="js-表达式"><a href="#js-表达式" class="header-anchor">#</a> JS 表达式</h2> <p><em>可以</em>（MAY）使用 JS 表达式（<code>~``</code>）生成属性值或变量，其中包含的字符串两侧的引号<em>尽量</em>（SHOULD）使用单引号（<code>'</code>）。</p> <hr> <h2 id="注释"><a href="#注释" class="header-anchor">#</a> 注释</h2> <p>单行注释<em>尽量</em>（SHOULD）使用 <code>//</code> 方式。</p> <div class="language-less extra-class"><pre class="language-less"><code><span class="token comment">// Hide everything</span>
+<span class="token selector">*</span> <span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">12/24/2020, 6:24:55 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/docs/pc/design/TS编码规范.html" class="prev">
+        ··· TypeScript 编码规范
+      </a></span> <span class="next"><a href="/docs/pc/design/JSX编码规范.html">
+        ··· JSX编码规范
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/docs/pc/assets/js/app.c821791e.js" defer></script><script src="/docs/pc/assets/js/2.57129fef.js" defer></script><script src="/docs/pc/assets/js/20.a53747b8.js" defer></script>
+  </body>
+</html>
